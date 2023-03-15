@@ -1,0 +1,17 @@
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <%= image_tag image.url, class: "w-full" if image.attached? %>
+  <div class="px-6 py-4">
+
+    <h2 class="font-bold text-xl mb-2">
+      <%= name %>
+      <span class="text-sm text-teal-800 font-mono bg-teal-100 inline rounded-full px-2 align-top float-right animate-pulse"><%= price %></span>
+    </h2>
+    <p class="text-gray-700 text-base">
+      <%= description %>
+    </p>
+    <div class="px-6 pt-4 pb-2">
+      <%= render LowStockComponent.new(stock: stock) %>
+      <%= render OutOfStockComponent.new(stock: stock) %>
+    </div>
+  </div>
+</div>

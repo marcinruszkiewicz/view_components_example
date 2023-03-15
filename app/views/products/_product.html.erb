@@ -1,0 +1,20 @@
+<div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <%= image_tag product.image.url, class: "w-full" if product.image.attached? %>
+  <div class="px-6 py-4">
+
+    <h2 class="font-bold text-xl mb-2">
+      <%= product.name %>
+      <span class="text-sm text-teal-800 font-mono bg-teal-100 inline rounded-full px-2 align-top float-right animate-pulse"><%= product.price %></span>
+    </h2>
+    <div class="px-6 pt-4 pb-2">
+      <% if product.stock > 0 && product.stock <= 10  %>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Only <%= product.stock %> left</span>
+      <% elsif product.stock == 0 %>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Out of stock</span>
+      <% end %>
+    </div>
+    <p class="text-gray-700 text-base">
+      <%= product.description %>
+    </p>
+  </div>
+</div>
