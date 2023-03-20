@@ -1,7 +1,7 @@
 module Tags
   class OutOfStockComponent < ::Tags::TagComponent
     def content
-      "Out of stock"
+      t(".out_of_stock")
     end
 
     def render?

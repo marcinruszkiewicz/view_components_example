@@ -1,7 +1,7 @@
 module Tags
   class LowStockComponent < ::Tags::TagComponent
     def content
-      "Only #{@stock} left"
+      t(".low_stock", count: @stock)
     end
 
     def render?

@@ -1,4 +1,4 @@
-RSpec.describe LowStockComponent, type: :component do
+RSpec.describe Tags::LowStockComponent, type: :component do
   let(:component) { described_class.new(stock: stock) }
 
   context "product with lots of stock" do

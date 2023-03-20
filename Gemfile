@@ -53,6 +53,7 @@ gem "pagy"
 gem "faker"
 gem "pry"
 gem "view_component"
+gem "i18n"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

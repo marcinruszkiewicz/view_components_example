@@ -10,8 +10,8 @@
       <%= description %>
     </p>
     <div class="px-6 pt-4 pb-2">
-      <%= render LowStockComponent.new(stock: stock) %>
-      <%= render OutOfStockComponent.new(stock: stock) %>
+      <%= render ::Tags::LowStockComponent.new(stock: stock) %>
+      <%= render ::Tags::OutOfStockComponent.new(stock: stock) %>
     </div>
   </div>
 </div>
